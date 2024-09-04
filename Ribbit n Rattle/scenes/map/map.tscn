@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://coqt6ddxxsk0d"]
+
+[ext_resource type="Script" path="res://scenes/map/map.gd" id="1_xrrex"]
+[ext_resource type="Resource" uid="uid://cdy3uo2nicx3h" path="res://battles/battle_stats_pool.tres" id="3_1pgep"]
+[ext_resource type="Script" path="res://scenes/map/map_generator.gd" id="3_7ureq"]
+
+[sub_resource type="Gradient" id="Gradient_rv6ui"]
+colors = PackedColorArray(0.0481372, 0.27085, 0.346119, 1, 0.141449, 0.591911, 0.417423, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nydcq"]
+gradient = SubResource("Gradient_rv6ui")
+width = 100
+
+[node name="Map" type="Node2D"]
+script = ExtResource("1_xrrex")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Lines" type="Node2D" parent="Visuals"]
+unique_name_in_owner = true
+
+[node name="Rooms" type="Node2D" parent="Visuals"]
+unique_name_in_owner = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(320, 180)
+zoom = Vector2(2, 2)
+
+[node name="MapGenerator" type="Node" parent="."]
+script = ExtResource("3_7ureq")
+battle_stats_pool = ExtResource("3_1pgep")
+
+[node name="MapBackground" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="MapBackground"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_nydcq")

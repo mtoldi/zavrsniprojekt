@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://dn22r4fj3y44n"]
+
+[ext_resource type="PackedScene" uid="uid://wnda8jodsjnh" path="res://enemies/skelly_normal/skelly_normal_enemy_ai.tscn" id="1_36fx3"]
+[ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="1_bspe5"]
+[ext_resource type="Texture2D" uid="uid://danbg0aq00n8s" path="res://art/skelly_normal.png" id="1_h5hcv"]
+
+[resource]
+script = ExtResource("1_bspe5")
+ai = ExtResource("1_36fx3")
+max_health = 24
+art = ExtResource("1_h5hcv")

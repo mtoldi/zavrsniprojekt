@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://q78qa7inpqme"]
+
+[ext_resource type="Texture2D" uid="uid://xi1aog1l1653" path="res://art/potatoes.png" id="1_03r1m"]
+[ext_resource type="Script" path="res://characters/Frog/cards/frog_potatoes.gd" id="2_py736"]
+
+[resource]
+script = ExtResource("2_py736")
+id = "frog_potatoes"
+type = 0
+target = 2
+cost = 2
+name = "Potatoes"
+exhausts = false
+icon = ExtResource("1_03r1m")
+tooltip_text = "[center] Deal [color=\"C04290\"]5 [/color]damage to all enemies.[/center]"

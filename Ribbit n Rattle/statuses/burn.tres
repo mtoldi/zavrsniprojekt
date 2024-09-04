@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="BurnStatus" load_steps=3 format=3 uid="uid://bxthdw020q03d"]
+
+[ext_resource type="Texture2D" uid="uid://v6kul7bljl45" path="res://art/status icons/burn.png" id="1_vfaqw"]
+[ext_resource type="Script" path="res://statuses/burn.gd" id="2_olcvw"]
+
+[resource]
+script = ExtResource("2_olcvw")
+id = "burn"
+type = 0
+stack_type = 2
+can_expire = true
+duration = 1
+stacks = 0
+icon = ExtResource("1_vfaqw")
+tooltip = "Burn: take %s damage at the start of the turn."

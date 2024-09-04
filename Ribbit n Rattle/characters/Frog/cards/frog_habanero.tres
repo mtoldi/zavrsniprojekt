@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://pcqkq63qubmk"]
+
+[ext_resource type="Texture2D" uid="uid://h1t8td6ge1s2" path="res://art/cards/habanero.png" id="1_iubux"]
+[ext_resource type="Script" path="res://characters/Frog/cards/frog_habanero.gd" id="2_lrytt"]
+
+[resource]
+script = ExtResource("2_lrytt")
+id = "habanero"
+type = 1
+target = 0
+cost = 0
+name = "Habanero"
+exhausts = false
+icon = ExtResource("1_iubux")
+tooltip_text = "[center]Gain [color=\"FF4F00\"]3 [/color]Spicy.[/center]"

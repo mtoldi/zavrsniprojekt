@@ -1,0 +1,55 @@
+[gd_scene load_steps=15 format=3 uid="uid://wnda8jodsjnh"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_yqcqp"]
+[ext_resource type="Script" path="res://enemies/skelly_normal/skelly_attack_action.gd" id="2_36u4h"]
+[ext_resource type="Script" path="res://enemies/skelly_normal/skelly_block_action.gd" id="3_v5ft3"]
+[ext_resource type="Texture2D" uid="uid://5248qjgp5hec" path="res://art/intent icons/attack intent.png" id="3_y80ua"]
+[ext_resource type="Script" path="res://enemies/skelly_normal/mega_block_action.gd" id="4_ur4sq"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_x7vjb"]
+[ext_resource type="Texture2D" uid="uid://b2ea8201sye62" path="res://art/intent icons/block intent.png" id="6_q11eo"]
+[ext_resource type="Texture2D" uid="uid://dd87hbrmm3gnr" path="res://art/intent icons/mega block.png" id="8_cqcxl"]
+[ext_resource type="Script" path="res://enemies/skelly_normal/ThirstyAction.gd" id="9_mcv5s"]
+[ext_resource type="Texture2D" uid="uid://bov7ha5asofge" path="res://art/status icons/thirsty.png" id="10_6lbby"]
+
+[sub_resource type="Resource" id="Resource_koltx"]
+script = ExtResource("4_x7vjb")
+base_text = "%s"
+icon = ExtResource("3_y80ua")
+
+[sub_resource type="Resource" id="Resource_2qtgr"]
+script = ExtResource("4_x7vjb")
+base_text = "%s"
+icon = ExtResource("6_q11eo")
+
+[sub_resource type="Resource" id="Resource_51ufx"]
+script = ExtResource("4_x7vjb")
+base_text = "%s"
+icon = ExtResource("8_cqcxl")
+
+[sub_resource type="Resource" id="Resource_o6577"]
+script = ExtResource("4_x7vjb")
+base_text = ""
+icon = ExtResource("10_6lbby")
+
+[node name="SkellyNormalEnemyAI" type="Node"]
+script = ExtResource("1_yqcqp")
+
+[node name="AttackAction" type="Node" parent="."]
+script = ExtResource("2_36u4h")
+intent = SubResource("Resource_koltx")
+type = 1
+chance_weight = 1.0
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("3_v5ft3")
+intent = SubResource("Resource_2qtgr")
+type = 1
+chance_weight = 1.0
+
+[node name="MegaBlock" type="Node" parent="."]
+script = ExtResource("4_ur4sq")
+intent = SubResource("Resource_51ufx")
+
+[node name="ThirstyAction" type="Node" parent="."]
+script = ExtResource("9_mcv5s")
+intent = SubResource("Resource_o6577")

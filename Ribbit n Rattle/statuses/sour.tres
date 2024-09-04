@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SourStatus" load_steps=3 format=3 uid="uid://cql3bqyxkkmwe"]
+
+[ext_resource type="Texture2D" uid="uid://dojp2vpno5vnc" path="res://art/status icons/sour.png" id="1_cj78l"]
+[ext_resource type="Script" path="res://statuses/sour.gd" id="2_wqf7w"]
+
+[resource]
+script = ExtResource("2_wqf7w")
+id = "sour"
+type = 2
+stack_type = 1
+can_expire = false
+duration = 0
+stacks = 2
+icon = ExtResource("1_cj78l")
+tooltip = "Sour: gain %s more block."

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SaltyStatus" load_steps=3 format=3 uid="uid://cxxviy4b3hadw"]
+
+[ext_resource type="Texture2D" uid="uid://dgqo3eqgyvxis" path="res://art/status icons/salty.png" id="1_x5hte"]
+[ext_resource type="Script" path="res://statuses/salty.gd" id="2_6v776"]
+
+[resource]
+script = ExtResource("2_6v776")
+id = "salty"
+type = 2
+stack_type = 1
+can_expire = false
+duration = 0
+stacks = 2
+icon = ExtResource("1_x5hte")
+tooltip = "Salty: attacks apply %s \"Thirsty\"."

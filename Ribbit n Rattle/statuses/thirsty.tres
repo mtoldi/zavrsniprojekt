@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ThirstyStatus" load_steps=3 format=3 uid="uid://py0cwkpgqgwu"]
+
+[ext_resource type="Texture2D" uid="uid://bov7ha5asofge" path="res://art/status icons/thirsty.png" id="1_1bpcj"]
+[ext_resource type="Script" path="res://statuses/thirsty.gd" id="2_ismk2"]
+
+[resource]
+script = ExtResource("2_ismk2")
+id = "thirsty"
+type = 1
+stack_type = 2
+can_expire = true
+duration = 2
+stacks = 0
+icon = ExtResource("1_1bpcj")
+tooltip = "Thirsty: Needs %s turn to rehydrate."

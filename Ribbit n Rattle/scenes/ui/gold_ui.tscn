@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://db4mntp5jcshk"]
+
+[ext_resource type="Script" path="res://scenes/ui/gold_ui.gd" id="1_7ddye"]
+[ext_resource type="Texture2D" uid="uid://huvlgub5haaw" path="res://art/Mana bottle UI/coin.png" id="1_gefjd"]
+[ext_resource type="Theme" uid="uid://y0ybtns8v84q" path="res://main_theme.tres" id="2_yh0vx"]
+
+[node name="GoldUI" type="HBoxContainer"]
+offset_right = 35.0
+offset_bottom = 16.0
+size_flags_vertical = 4
+theme_override_constants/separation = 3
+script = ExtResource("1_7ddye")
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("1_gefjd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("2_yh0vx")
+theme_override_font_sizes/font_size = 6
+text = "999"
+vertical_alignment = 1

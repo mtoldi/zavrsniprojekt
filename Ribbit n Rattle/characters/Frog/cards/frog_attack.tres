@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://colal2y07tb0h"]
+
+[ext_resource type="Texture2D" uid="uid://bg3gscgsjqjom" path="res://art/attack_rework.png" id="1_60ek8"]
+[ext_resource type="Script" path="res://characters/Frog/cards/attack.gd" id="2_acsoy"]
+
+[resource]
+script = ExtResource("2_acsoy")
+id = "frog_attack"
+type = null
+target = 1
+cost = 1
+name = "Attack"
+exhausts = null
+icon = ExtResource("1_60ek8")
+tooltip_text = "[center] Deal [color=\"C04290\"]%s [/color]damage.[/center]"

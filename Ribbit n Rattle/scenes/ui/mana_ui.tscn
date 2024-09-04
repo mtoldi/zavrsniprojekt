@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1pavy2fu20eu"]
+
+[ext_resource type="Theme" uid="uid://y0ybtns8v84q" path="res://main_theme.tres" id="1_cnnxk"]
+[ext_resource type="Texture2D" uid="uid://bphojnln4ssv" path="res://art/mana bottle.png" id="2_ll01n"]
+[ext_resource type="Script" path="res://scenes/ui/mana_ui.gd" id="2_nk3gb"]
+[ext_resource type="Resource" uid="uid://bfey8v7aj8qwo" path="res://characters/Frog/frog.tres" id="4_phgkc"]
+
+[node name="ManaUI" type="TextureRect"]
+texture_filter = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -78.0
+offset_right = 63.0
+offset_bottom = -14.0
+grow_vertical = 0
+theme = ExtResource("1_cnnxk")
+texture = ExtResource("2_ll01n")
+script = ExtResource("2_nk3gb")
+char_stats = ExtResource("4_phgkc")
+
+[node name="ManaLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = 8.0
+offset_right = -6.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+text = "3/3"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bukowwgd3rjcr"]
+
+[ext_resource type="Texture2D" uid="uid://34eklvmw3g18" path="res://art/cards/lemon.png" id="1_qe4ef"]
+[ext_resource type="Script" path="res://characters/Frog/cards/frog_lemon.gd" id="2_2veg5"]
+
+[resource]
+script = ExtResource("2_2veg5")
+id = "frog_lemon"
+type = 1
+target = 0
+cost = 1
+name = "Lemon"
+exhausts = false
+icon = ExtResource("1_qe4ef")
+tooltip_text = "[center]Gain [color=\"FFCC33\"]2 [/color]Sour.[/center]"

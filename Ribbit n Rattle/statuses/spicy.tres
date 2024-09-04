@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SpicyStatus" load_steps=3 format=3 uid="uid://b4m123tnbcrlr"]
+
+[ext_resource type="Texture2D" uid="uid://tknxaa3awbgw" path="res://art/status icons/spicy.png" id="1_6qkfg"]
+[ext_resource type="Script" path="res://statuses/spicy.gd" id="2_4v00v"]
+
+[resource]
+script = ExtResource("2_4v00v")
+id = "spicy"
+type = 2
+stack_type = 1
+can_expire = false
+duration = 0
+stacks = 2
+icon = ExtResource("1_6qkfg")
+tooltip = "Spicy: next attack applies %s Burn 
+"

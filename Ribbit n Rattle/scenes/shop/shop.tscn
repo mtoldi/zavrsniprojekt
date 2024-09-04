@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://brhhj27fotjim"]
+
+[ext_resource type="Script" path="res://scenes/shop/shop.gd" id="1_edmlh"]
+[ext_resource type="Theme" uid="uid://y0ybtns8v84q" path="res://main_theme.tres" id="2_khvd8"]
+[ext_resource type="Theme" uid="uid://c8iww1ssy8m72" path="res://button_theme.tres" id="3_p8b37"]
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_edmlh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.20682, 0.644498, 0.582384, 0.317647)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.0
+offset_top = -29.0
+offset_right = 34.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_khvd8")
+theme_override_font_sizes/font_size = 24
+text = "Shop
+*coming soon*
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("3_p8b37")
+text = "go back"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

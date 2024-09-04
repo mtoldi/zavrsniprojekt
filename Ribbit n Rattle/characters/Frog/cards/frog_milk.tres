@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d0ivdv8tjrrsv"]
+
+[ext_resource type="Texture2D" uid="uid://bgypc05as1him" path="res://art/cards/milk.png" id="1_53okq"]
+[ext_resource type="Script" path="res://characters/Frog/cards/frog_milk.gd" id="2_arfto"]
+
+[resource]
+script = ExtResource("2_arfto")
+id = "milk"
+type = 1
+target = 0
+cost = 0
+name = "Milk"
+exhausts = true
+icon = ExtResource("1_53okq")
+tooltip_text = "[center]Draw [color=\"0F2D94\"]2.[/color] [/center]
+[center][color=\"F07A84\"]dairy[/color] [/center]"

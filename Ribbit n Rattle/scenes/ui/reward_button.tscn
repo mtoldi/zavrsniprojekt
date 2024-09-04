@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=3 uid="uid://0ic17vu4qjp8"]
+
+[ext_resource type="Script" path="res://scenes/ui/reward_button.gd" id="1_mi0m8"]
+[ext_resource type="Theme" uid="uid://c8iww1ssy8m72" path="res://button_theme.tres" id="1_srugt"]
+[ext_resource type="Texture2D" uid="uid://huvlgub5haaw" path="res://art/Mana bottle UI/coin.png" id="1_vou6d"]
+[ext_resource type="Theme" uid="uid://y0ybtns8v84q" path="res://main_theme.tres" id="2_5lqi5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4oemg"]
+bg_color = Color(0.186388, 0.564798, 0.44858, 1)
+
+[sub_resource type="Theme" id="Theme_wbblg"]
+Button/styles/normal = SubResource("StyleBoxFlat_4oemg")
+
+[node name="RewardButton" type="Button"]
+custom_minimum_size = Vector2(0, 24)
+offset_right = 80.0
+offset_bottom = 24.0
+theme = ExtResource("1_srugt")
+script = ExtResource("1_mi0m8")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_wbblg")
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="CustomIcon" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("1_vou6d")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CustomText" type="Label" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_5lqi5")
+theme_override_font_sizes/font_size = 12
+text = "85"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

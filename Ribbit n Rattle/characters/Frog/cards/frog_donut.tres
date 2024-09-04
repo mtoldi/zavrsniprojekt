@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ipbybm16tb8g"]
+
+[ext_resource type="Script" path="res://characters/Frog/cards/frog_donut.gd" id="1_vw1ww"]
+[ext_resource type="Texture2D" uid="uid://dm75q277w0d2e" path="res://art/cards/donut.png" id="1_yvq6y"]
+
+[resource]
+script = ExtResource("1_vw1ww")
+id = "frog_donut"
+type = 1
+target = 0
+cost = 1
+name = "Donut"
+exhausts = false
+icon = ExtResource("1_yvq6y")
+tooltip_text = "[center]Gain [color=\"F46DF9\"]2 [/color]Sweet.[/center]"

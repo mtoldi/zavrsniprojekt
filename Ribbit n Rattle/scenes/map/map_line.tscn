@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cruiff70bw0k7"]
+
+[ext_resource type="Texture2D" uid="uid://pgjjsxsrwtqf" path="res://art/Mana bottle UI/line.png" id="1_we0tn"]
+
+[node name="MapLine" type="Line2D"]
+texture_repeat = 2
+default_color = Color(0.717769, 0.475135, 0.851583, 1)
+texture = ExtResource("1_we0tn")
+texture_mode = 1

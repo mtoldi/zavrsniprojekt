@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardPile" load_steps=11 format=3 uid="uid://bww4wc06082mf"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_pgf7w"]
+[ext_resource type="Resource" uid="uid://colal2y07tb0h" path="res://characters/Frog/cards/frog_attack.tres" id="1_wqcd6"]
+[ext_resource type="Resource" uid="uid://bkgndo5nj3viv" path="res://characters/Frog/cards/frog_block.tres" id="2_heflw"]
+[ext_resource type="Resource" uid="uid://bukowwgd3rjcr" path="res://characters/Frog/cards/frog_lemon.tres" id="2_ycv3m"]
+[ext_resource type="Resource" uid="uid://ipbybm16tb8g" path="res://characters/Frog/cards/frog_donut.tres" id="3_g5hcr"]
+[ext_resource type="Resource" uid="uid://pcqkq63qubmk" path="res://characters/Frog/cards/frog_habanero.tres" id="3_rkbvb"]
+[ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="4_qgm56"]
+[ext_resource type="Resource" uid="uid://bubj50aqy4yte" path="res://characters/Frog/cards/frog_fries.tres" id="5_7efur"]
+[ext_resource type="Resource" uid="uid://d0ivdv8tjrrsv" path="res://characters/Frog/cards/frog_milk.tres" id="6_5w2lm"]
+[ext_resource type="Resource" uid="uid://dl60kmo2dncak" path="res://characters/Frog/cards/frog_hydrate.tres" id="8_slow4"]
+
+[resource]
+script = ExtResource("4_qgm56")
+cards = Array[ExtResource("1_pgf7w")]([ExtResource("1_wqcd6"), ExtResource("2_ycv3m"), ExtResource("1_wqcd6"), ExtResource("3_g5hcr"), ExtResource("3_rkbvb"), ExtResource("5_7efur"), ExtResource("2_heflw"), ExtResource("6_5w2lm"), ExtResource("1_wqcd6"), ExtResource("1_wqcd6"), ExtResource("2_heflw"), ExtResource("8_slow4")])

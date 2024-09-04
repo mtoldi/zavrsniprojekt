@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bkgndo5nj3viv"]
+
+[ext_resource type="Texture2D" uid="uid://bu36bdsdngw15" path="res://art/defend_rework.png" id="1_s6wkp"]
+[ext_resource type="Script" path="res://characters/Frog/cards/block.gd" id="2_46tm5"]
+
+[resource]
+script = ExtResource("2_46tm5")
+id = "frog_block"
+type = 1
+target = null
+cost = 1
+name = "Defend"
+exhausts = null
+icon = ExtResource("1_s6wkp")
+tooltip_text = "[center]Gain [color=\"23B289\"]%s [/color]Block.[/center]"

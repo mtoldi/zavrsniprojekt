@@ -1,0 +1,57 @@
+[gd_scene load_steps=15 format=3 uid="uid://8w4yi58eely6"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_8rl3f"]
+[ext_resource type="Script" path="res://enemies/skelly_mage/mage_cast_action.gd" id="2_8srhu"]
+[ext_resource type="Texture2D" uid="uid://byn11rvle3xed" path="res://art/intent icons/spell intent.png" id="3_fvhau"]
+[ext_resource type="Script" path="res://enemies/skelly_mage/mage_block_action.gd" id="3_jeb0f"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_4xc0v"]
+[ext_resource type="Texture2D" uid="uid://b2ea8201sye62" path="res://art/intent icons/block intent.png" id="6_ls76s"]
+[ext_resource type="Script" path="res://enemies/skelly_mage/mage_attack_action.gd" id="7_s06aa"]
+[ext_resource type="Texture2D" uid="uid://5248qjgp5hec" path="res://art/intent icons/attack intent.png" id="8_ykkov"]
+[ext_resource type="Script" path="res://enemies/skelly_mage/MageThirstyAction.gd" id="9_wlqwj"]
+[ext_resource type="Texture2D" uid="uid://bov7ha5asofge" path="res://art/status icons/thirsty.png" id="10_80jfs"]
+
+[sub_resource type="Resource" id="Resource_g5xga"]
+script = ExtResource("4_4xc0v")
+base_text = ""
+icon = ExtResource("3_fvhau")
+
+[sub_resource type="Resource" id="Resource_5g4qj"]
+script = ExtResource("4_4xc0v")
+base_text = "%s"
+icon = ExtResource("6_ls76s")
+
+[sub_resource type="Resource" id="Resource_17hrf"]
+script = ExtResource("4_4xc0v")
+base_text = "%s"
+icon = ExtResource("8_ykkov")
+
+[sub_resource type="Resource" id="Resource_ji08v"]
+script = ExtResource("4_4xc0v")
+base_text = ""
+icon = ExtResource("10_80jfs")
+
+[node name="SkellyMageEnemyAI" type="Node"]
+script = ExtResource("1_8rl3f")
+
+[node name="MageCastAction" type="Node" parent="."]
+script = ExtResource("2_8srhu")
+intent = SubResource("Resource_g5xga")
+type = 1
+chance_weight = 1.0
+
+[node name="MageBlockAction" type="Node" parent="."]
+script = ExtResource("3_jeb0f")
+intent = SubResource("Resource_5g4qj")
+type = 1
+chance_weight = 1.0
+
+[node name="MageAttackAction" type="Node" parent="."]
+script = ExtResource("7_s06aa")
+intent = SubResource("Resource_17hrf")
+type = 1
+chance_weight = 1.0
+
+[node name="MageThirstyAction" type="Node" parent="."]
+script = ExtResource("9_wlqwj")
+intent = SubResource("Resource_ji08v")

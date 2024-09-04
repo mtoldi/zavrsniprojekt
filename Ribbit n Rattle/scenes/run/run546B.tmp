@@ -1,0 +1,94 @@
+[gd_scene load_steps=10 format=3 uid="uid://brjahlh7dya27"]
+
+[ext_resource type="Script" path="res://scenes/run/run.gd" id="1_fkmj2"]
+[ext_resource type="PackedScene" uid="uid://coqt6ddxxsk0d" path="res://scenes/map/map.tscn" id="1_swikb"]
+[ext_resource type="Resource" uid="uid://bkb8unct1bva8" path="res://scenes/run/run_startup.tres" id="2_8xirv"]
+[ext_resource type="PackedScene" uid="uid://db4mntp5jcshk" path="res://scenes/ui/gold_ui.tscn" id="4_bi5vi"]
+[ext_resource type="Theme" uid="uid://c8iww1ssy8m72" path="res://button_theme.tres" id="4_mi1tq"]
+[ext_resource type="PackedScene" uid="uid://cnvjdwdvuf807" path="res://scenes/ui/health_ui.tscn" id="5_pht16"]
+[ext_resource type="PackedScene" uid="uid://cs2762dq4nr45" path="res://scenes/ui/card_pile_opener.tscn" id="6_ybj1k"]
+[ext_resource type="Theme" uid="uid://y0ybtns8v84q" path="res://main_theme.tres" id="7_vcec8"]
+[ext_resource type="PackedScene" uid="uid://c2gikbmtandy" path="res://scenes/ui/card_pile_view.tscn" id="8_a0dd8"]
+
+[node name="Run" type="Node"]
+script = ExtResource("1_fkmj2")
+run_startup = ExtResource("2_8xirv")
+
+[node name="Map" parent="." instance=ExtResource("1_swikb")]
+
+[node name="CurrentView" type="Node" parent="."]
+
+[node name="DebugButtons" type="VBoxContainer" parent="."]
+visible = false
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+alignment = 1
+
+[node name="MapButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_mi1tq")
+text = "map"
+
+[node name="BattleButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_mi1tq")
+text = "Battle"
+
+[node name="ShopButton" type="Button" parent="DebugButtons"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("4_mi1tq")
+text = "Shop"
+
+[node name="TopBar" type="CanvasLayer" parent="."]
+layer = 3
+
+[node name="Background" type="ColorRect" parent="TopBar"]
+custom_minimum_size = Vector2(0, 18)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 0.588235)
+
+[node name="BarItems" type="HBoxContainer" parent="TopBar"]
+custom_minimum_size = Vector2(0, 18)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HealthUI" parent="TopBar/BarItems" instance=ExtResource("5_pht16")]
+unique_name_in_owner = true
+layout_mode = 2
+show_max_hp = true
+
+[node name="GoldUI" parent="TopBar/BarItems" instance=ExtResource("4_bi5vi")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Placeholder" type="Control" parent="TopBar/BarItems"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="DeckButton" parent="TopBar/BarItems" node_paths=PackedStringArray("counter") instance=ExtResource("6_ybj1k")]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(18, 16)
+layout_mode = 2
+counter = NodePath("Counter")
+
+[node name="Counter" type="Label" parent="TopBar/BarItems/DeckButton"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 12.0
+offset_right = 41.0
+offset_bottom = 35.0
+theme = ExtResource("7_vcec8")
+theme_override_font_sizes/font_size = 6
+text = "99"
+
+[node name="DeckView" parent="TopBar" instance=ExtResource("8_a0dd8")]
+unique_name_in_owner = true
+visible = false

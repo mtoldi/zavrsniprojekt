@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SweetStatus" load_steps=3 format=3 uid="uid://ccogqm23m80v0"]
+
+[ext_resource type="Texture2D" uid="uid://cilfl5uvy08e1" path="res://art/status icons/sweet.png" id="1_bnltr"]
+[ext_resource type="Script" path="res://statuses/sweet.gd" id="1_ryol5"]
+
+[resource]
+script = ExtResource("1_ryol5")
+id = "sweet"
+type = 2
+stack_type = 1
+can_expire = false
+duration = 0
+stacks = 2
+icon = ExtResource("1_bnltr")
+tooltip = "Sweet: deal %s more damage."

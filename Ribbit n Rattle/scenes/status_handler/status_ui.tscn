@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl6pahgkalm8k"]
+
+[ext_resource type="Script" path="res://scenes/status_handler/status_ui.gd" id="1_3sl6a"]
+[ext_resource type="Texture2D" uid="uid://cilfl5uvy08e1" path="res://art/status icons/sweet.png" id="1_rg3gd"]
+[ext_resource type="Resource" uid="uid://ccogqm23m80v0" path="res://statuses/sweet.tres" id="2_envq8"]
+[ext_resource type="Theme" uid="uid://y0ybtns8v84q" path="res://main_theme.tres" id="2_wbmaq"]
+
+[node name="StatusUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -624.0
+offset_bottom = -344.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+script = ExtResource("1_3sl6a")
+status = ExtResource("2_envq8")
+
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("1_rg3gd")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Duration" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 6.0
+offset_right = 26.0
+offset_bottom = 14.0
+theme = ExtResource("2_wbmaq")
+text = "99"
+
+[node name="Stacks" type="Label" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 6.0
+offset_right = 26.0
+offset_bottom = 14.0
+theme = ExtResource("2_wbmaq")
+text = "99"

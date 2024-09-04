@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dehk5yxn8npu"]
+
+[ext_resource type="Texture2D" uid="uid://d11mietyne7f2" path="res://art/cards/Cayenne peppers.png" id="1_kjg1o"]
+[ext_resource type="Script" path="res://characters/Frog/cards/frog_cayenne.gd" id="2_th783"]
+
+[resource]
+script = ExtResource("2_th783")
+id = "Cayenne"
+type = 1
+target = 0
+cost = 1
+name = "Cayenne"
+exhausts = false
+icon = ExtResource("1_kjg1o")
+tooltip_text = "[center]Gain [color=\"FF4F00\"]5 [/color]Spicy.[/center]"

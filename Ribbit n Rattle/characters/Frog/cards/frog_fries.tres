@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bubj50aqy4yte"]
+
+[ext_resource type="Texture2D" uid="uid://xxc02bas2reh" path="res://art/cards/fries.png" id="1_1se12"]
+[ext_resource type="Script" path="res://characters/Frog/cards/frog_fries.gd" id="2_bgb75"]
+
+[resource]
+script = ExtResource("2_bgb75")
+id = "fries"
+type = 1
+target = 0
+cost = 0
+name = "Fries"
+exhausts = false
+icon = ExtResource("1_1se12")
+tooltip_text = "[center]Gain [color=\"546E7A\"]1 [/color]Salty.[/center]
+[center]Draw [color=\"0F2D94\"]1.[/color] [/center]"

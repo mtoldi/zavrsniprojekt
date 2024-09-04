@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CalciumStatus" load_steps=3 format=3 uid="uid://3fkkrwucpnka"]
+
+[ext_resource type="Texture2D" uid="uid://clhq0icty13cd" path="res://art/status icons/calcium.png" id="1_0y0n7"]
+[ext_resource type="Script" path="res://statuses/calcium.gd" id="2_e0ks2"]
+
+[resource]
+script = ExtResource("2_e0ks2")
+id = "calcium"
+type = 2
+stack_type = 1
+can_expire = false
+duration = 0
+stacks = 1
+icon = ExtResource("1_0y0n7")
+tooltip = "Calcium deficiency: gain %s less block."

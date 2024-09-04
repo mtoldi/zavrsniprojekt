@@ -1,0 +1,114 @@
+[gd_scene load_steps=9 format=3 uid="uid://bvbfghmxxuirx"]
+
+[ext_resource type="Script" path="res://scenes/ui/main_menu.gd" id="1_alige"]
+[ext_resource type="Theme" uid="uid://y0ybtns8v84q" path="res://main_theme.tres" id="1_xseos"]
+[ext_resource type="Texture2D" uid="uid://dobp4pbmhv2x7" path="res://art/startScreen.png" id="2_5s62a"]
+[ext_resource type="Texture2D" uid="uid://bxwwvl163w50d" path="res://art/mage skelly.png" id="3_pdhgu"]
+[ext_resource type="FontFile" uid="uid://bg48gaqt22so1" path="res://fonts/KiwiSoda.ttf" id="4_jxpix"]
+[ext_resource type="Texture2D" uid="uid://bl34hol2a8nym" path="res://enemies/fire/fireskelly.png" id="5_11r0o"]
+[ext_resource type="Texture2D" uid="uid://v3tmw3eb2lnt" path="res://art/frog.png" id="5_h3ft8"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5g7m2"]
+font = ExtResource("4_jxpix")
+font_size = 60
+font_color = Color(0.648547, 0.000314101, 0.64882, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_alige")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_5s62a")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -237.0
+offset_top = 55.0
+offset_right = 257.0
+offset_bottom = 124.0
+grow_horizontal = 2
+theme = ExtResource("1_xseos")
+text = "Ribbit n Rattle"
+label_settings = SubResource("LabelSettings_5g7m2")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -208.0
+offset_right = 75.0
+offset_bottom = -68.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 40)
+layout_mode = 2
+theme = ExtResource("1_xseos")
+theme_override_colors/font_color = Color(0.348344, 0.813488, 0.425403, 1)
+theme_override_constants/h_separation = 0
+theme_override_font_sizes/font_size = 20
+text = "Continue"
+
+[node name="New run" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+theme = ExtResource("1_xseos")
+theme_override_colors/font_color = Color(0.348344, 0.813488, 0.425403, 1)
+theme_override_font_sizes/font_size = 20
+text = "New run"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 2
+theme = ExtResource("1_xseos")
+theme_override_colors/font_color = Color(0.348344, 0.813488, 0.425403, 1)
+theme_override_font_sizes/font_size = 20
+text = "Exit
+"
+
+[node name="skelly" type="Sprite2D" parent="."]
+position = Vector2(378, 275)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_11r0o")
+flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(78, 266)
+scale = Vector2(6.45313, 6)
+texture = ExtResource("3_pdhgu")
+flip_h = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(207, 308)
+texture = ExtResource("5_h3ft8")
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/New run" to="." method="_on_new_run_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]

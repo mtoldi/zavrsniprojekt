@@ -1,0 +1,21 @@
+[gd_scene load_steps=6 format=3 uid="uid://cu15yvj4jycih"]
+
+[ext_resource type="PackedScene" uid="uid://1hvruqvw54in" path="res://scenes/enemy/enemy.tscn" id="1_msp81"]
+[ext_resource type="Resource" uid="uid://dn22r4fj3y44n" path="res://enemies/skelly_normal/skelly_normal_enemy.tres" id="2_iapaw"]
+[ext_resource type="PackedScene" uid="uid://b1loqkk38ebla" path="res://enemies/skelly_normal/animated_sprite_2d.tscn" id="3_lbr6i"]
+[ext_resource type="Resource" uid="uid://bva3gagrqu2tq" path="res://enemies/skelly_mage/skelly_mage.tres" id="3_ltvog"]
+[ext_resource type="PackedScene" uid="uid://dxcu2kt2t85bx" path="res://enemies/skelly_mage/animated_sprite_2d2.tscn" id="3_omgjv"]
+
+[node name="Tier0MN" type="Node2D"]
+
+[node name="Enemy2" parent="." instance=ExtResource("1_msp81")]
+position = Vector2(418, 112)
+stats = ExtResource("2_iapaw")
+
+[node name="AnimatedSprite2D2" parent="Enemy2" instance=ExtResource("3_lbr6i")]
+
+[node name="Enemy" parent="." instance=ExtResource("1_msp81")]
+position = Vector2(544, 148)
+stats = ExtResource("3_ltvog")
+
+[node name="AnimatedSprite2D2" parent="Enemy" instance=ExtResource("3_omgjv")]

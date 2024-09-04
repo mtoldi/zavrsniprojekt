@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="CharacterStats" load_steps=5 format=3 uid="uid://bfey8v7aj8qwo"]
+
+[ext_resource type="Script" path="res://custom_resources/character_stats.gd" id="1_848nh"]
+[ext_resource type="Texture2D" uid="uid://v3tmw3eb2lnt" path="res://art/frog.png" id="1_lhujf"]
+[ext_resource type="Resource" uid="uid://ik2eg3n8kakp" path="res://characters/Frog/frog_card_reward_pool.tres" id="2_k7fiu"]
+[ext_resource type="Resource" uid="uid://bww4wc06082mf" path="res://characters/Frog/starting_deck.tres" id="3_powv1"]
+
+[resource]
+script = ExtResource("1_848nh")
+starting_deck = ExtResource("3_powv1")
+cards_per_turn = 4
+max_mana = 3
+draftable_cards = ExtResource("2_k7fiu")
+max_health = 30
+art = ExtResource("1_lhujf")

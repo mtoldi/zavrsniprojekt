@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=3 uid="uid://1hvruqvw54in"]
+
+[ext_resource type="Texture2D" uid="uid://bxwwvl163w50d" path="res://art/mage skelly.png" id="1_8eiv7"]
+[ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_x0x5l"]
+[ext_resource type="Texture2D" uid="uid://bb3rcs5nqntir" path="res://art/arrow.png" id="2_0g61e"]
+[ext_resource type="PackedScene" uid="uid://cmug1f16xdx48" path="res://scenes/ui/stats_ui.tscn" id="3_1kxeo"]
+[ext_resource type="PackedScene" uid="uid://51eio8n47sv1" path="res://scenes/status_handler/status_handler.tscn" id="5_4akel"]
+[ext_resource type="PackedScene" uid="uid://cwikujga8x1mf" path="res://scenes/modifier_handler/modifier_handler.tscn" id="6_onxsq"]
+[ext_resource type="PackedScene" uid="uid://w5flgskqqchk" path="res://scenes/modifier_handler/modifier.tscn" id="7_t7kg4"]
+[ext_resource type="PackedScene" uid="uid://b7ral6hvp2u3s" path="res://scenes/ui/intent_ui.tscn" id="8_jpm0i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pjccc"]
+size = Vector2(33, 49)
+
+[node name="Enemy" type="Area2D" groups=["enemies"]]
+scale = Vector2(2, 2)
+collision_layer = 4
+script = ExtResource("1_x0x5l")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture_filter = 1
+texture = ExtResource("1_8eiv7")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -47)
+rotation = 3.14159
+texture = ExtResource("2_0g61e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_pjccc")
+
+[node name="StatsUI" parent="." instance=ExtResource("3_1kxeo")]
+offset_top = 32.0
+offset_bottom = 48.0
+
+[node name="StatusHandler" parent="." node_paths=PackedStringArray("status_owner") instance=ExtResource("5_4akel")]
+custom_minimum_size = Vector2(16, 16)
+offset_left = -25.0
+offset_top = 51.0
+offset_right = -9.0
+offset_bottom = 67.0
+status_owner = NodePath("..")
+
+[node name="ModifierHandler" parent="." instance=ExtResource("6_onxsq")]
+
+[node name="DamageDealtModifier" parent="ModifierHandler" instance=ExtResource("7_t7kg4")]
+
+[node name="DamageTakenModifier" parent="ModifierHandler" instance=ExtResource("7_t7kg4")]
+type = 1
+
+[node name="TickModifier" parent="ModifierHandler" instance=ExtResource("7_t7kg4")]
+type = 5
+
+[node name="BlockModifier" parent="ModifierHandler" instance=ExtResource("7_t7kg4")]
+type = 6
+
+[node name="NoAttack" parent="ModifierHandler" instance=ExtResource("7_t7kg4")]
+type = 9
+
+[node name="LessBlockModifier" parent="ModifierHandler" instance=ExtResource("7_t7kg4")]
+type = 7
+
+[node name="SaltModifier" parent="ModifierHandler" instance=ExtResource("7_t7kg4")]
+type = 8
+
+[node name="IntentUI" parent="." instance=ExtResource("8_jpm0i")]
+offset_left = -22.0
+offset_top = -37.0
+offset_right = 18.0
+offset_bottom = -21.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

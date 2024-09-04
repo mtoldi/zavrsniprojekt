@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dl60kmo2dncak"]
+
+[ext_resource type="Texture2D" uid="uid://dh2wpg8bhgqx4" path="res://art/hydrate_rework.png" id="1_lxj5a"]
+[ext_resource type="Script" path="res://characters/Frog/cards/frog_hydrate.gd" id="2_ji11f"]
+
+[resource]
+script = ExtResource("2_ji11f")
+id = "frog_hydrate"
+type = 2
+target = 0
+cost = 1
+name = "Hydrate"
+exhausts = false
+icon = ExtResource("1_lxj5a")
+tooltip_text = "[center]Heal [color=\"28940F\"]3.[/color][/center]
+[center]Draw [color=\"0F2D94\"]1.[/color] [/center]"
